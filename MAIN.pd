@@ -1,4 +1,4 @@
-#N canvas 1790 337 972 510 12;
+#N canvas 219 171 972 533 12;
 #X obj 9 26 cnv 15 220 200 empty empty SUBPATCH 20 12 0 14 -237178
 -66577 0;
 #N canvas 255 107 883 442 patch 0;
@@ -49,9 +49,9 @@
 #X obj 324 64 ro_slider;
 #X obj 381 61 vsl 20 100 0 100 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X floatatom 381 176 5 0 0 0 - - -;
-#X floatatom 324 176 5 0 0 0 - - -;
-#X floatatom 345 26 5 0 0 0 - - -;
+#X floatatom 381 176 5 0 0 0 - - -, f 5;
+#X floatatom 324 176 5 0 0 0 - - -, f 5;
+#X floatatom 345 26 5 0 0 0 - - -, f 5;
 #X obj 250 243 cnv 15 220 200 empty empty BUTTON 20 12 0 14 -104026
 -262106 0;
 #X text 286 203 read_only;
@@ -73,8 +73,8 @@
 #X obj 9 243 cnv 15 220 200 empty empty STEP_NUMBER 20 12 0 14 -79059
 -262144 0;
 #X obj 42 321 step_number;
-#X floatatom 42 281 5 0 0 0 - - -;
-#X floatatom 42 384 5 0 0 0 - - -;
+#X floatatom 42 281 5 0 0 0 - - -, f 5;
+#X floatatom 42 384 5 0 0 0 - - -, f 5;
 #X obj 478 26 cnv 15 220 200 empty change_my_name going? 20 20 0 28
 -104064 -262144 0;
 #X msg 501 185 \; change_my_name label \$1;
@@ -96,9 +96,6 @@
 #X obj 713 27 cnv 15 220 200 empty empty ADVICE 20 12 0 14 -228856
 -66577 0;
 #X text 727 68 Use pastel color & grey;
-#X text 727 101 Use Purr-Data : . Move back move front . Resize canva
-with mouse . Use auto-align function;
-#X text 728 161;
 #X connect 3 0 6 0;
 #X connect 4 0 5 0;
 #X connect 7 0 4 0;
