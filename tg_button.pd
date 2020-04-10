@@ -1,0 +1,45 @@
+#N canvas 563 305 832 384 10;
+#X obj 100 130 hradio 35 0 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 325 348 label-color;
+#X text 340 373 label-color;
+#X obj 389 425 pack 22 0 0 \$0;
+#X obj 240 345 t b f;
+#X msg 240 311 2;
+#X obj 222 429 pack 22 0 0 \$0;
+#X obj 241 89 inlet;
+#X obj 92 128 cnv 15 98 38 empty \$0_playcnv click 35 17 0 15 -1 -66577
+0;
+#X obj 96 137 cnv 15 25 18 empty \$0_playsquare empty 20 12 0 14 -66577
+-262144 0;
+#X obj 120 350 outlet;
+#X msg 219 460 \; \$4_playsquare color \$1 \$2 \$3;
+#X msg 390 458 \; \$4_playcnv color \$1 \$2 \$3;
+#X obj 102 206 bang;
+#X msg 301 310 6;
+#X obj 241 223 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 559 382 symbol \$1;
+#X obj 559 427 pack s \$0;
+#X msg 559 458 \; \$2_playcnv label \$1;
+#X obj 559 225 loadbang;
+#X obj 240 281 sel 0 1;
+#X connect 0 0 13 0;
+#X connect 3 0 12 0;
+#X connect 4 0 3 0;
+#X connect 4 1 3 2;
+#X connect 4 1 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 11 0;
+#X connect 7 0 15 0;
+#X connect 13 0 15 0;
+#X connect 14 0 4 0;
+#X connect 15 0 10 0;
+#X connect 15 0 20 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 19 0 16 0;
+#X connect 19 0 5 0;
+#X connect 20 0 5 0;
+#X connect 20 1 14 0;
+#X coords 0 -1 1 1 100 40 2 91 127;

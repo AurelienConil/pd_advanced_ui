@@ -1,0 +1,122 @@
+#N canvas 1790 337 972 510 12;
+#X obj 9 26 cnv 15 220 200 empty empty SUBPATCH 20 12 0 14 -237178
+-66577 0;
+#N canvas 255 107 883 442 patch 0;
+#X obj 101 101 cnv 15 138 38 empty empty PATCH 20 12 0 14 -66577 -262144
+0;
+#X obj 38 100 bng 35 250 50 0 empty empty CLOSE 2 -12 0 10 -262144
+-1 -1;
+#X msg 38 164 \; pd-patch vis 0;
+#N canvas 397 246 1038 529 open 0;
+#X text 462 314 label-color;
+#X text 477 339 label-color;
+#X obj 377 311 t b f;
+#X msg 400 277 2;
+#X obj 466 220 loadbang;
+#X obj 104 101 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 104 166 bang;
+#X msg 363 277 43;
+#X obj 101 101 cnv 15 38 15 empty \$0_opencnv open 6 8 0 10 -66577
+-262144 0;
+#X msg 405 398 \; \$4_opencnv color \$1 \$2 \$3;
+#X obj 363 197 bang;
+#X obj 404 365 pack 43 0 0 \$0;
+#X obj 400 220 delay 200;
+#X msg 101 247 \; pd-patch vis 1;
+#X msg 614 289 \; pd-patch vis 0;
+#X connect 2 1 11 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 4 0 14 0;
+#X connect 5 0 6 0;
+#X connect 6 0 10 0;
+#X connect 6 0 13 0;
+#X connect 7 0 2 0;
+#X connect 10 0 7 0;
+#X connect 10 0 12 0;
+#X connect 11 0 9 0;
+#X connect 12 0 3 0;
+#X coords 0 -1 1 1 40 17 2 100 100;
+#X restore 177 107 pd open;
+#X obj 263 76 cnv 15 437 173 empty empty THIS_IS_A_SUBPATCH 20 12 0
+14 -233017 -66577 0;
+#X connect 1 0 2 0;
+#X coords 0 -1 1 1 140 40 2 100 100;
+#X restore 49 72 pd patch;
+#X obj 249 25 cnv 15 220 200 empty empty SLIDER 20 12 0 14 -212211
+-66577 0;
+#X obj 324 64 ro_slider;
+#X obj 381 61 vsl 20 100 0 100 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 381 176 5 0 0 0 - - -;
+#X floatatom 324 176 5 0 0 0 - - -;
+#X floatatom 345 26 5 0 0 0 - - -;
+#X obj 250 243 cnv 15 220 200 empty empty BUTTON 20 12 0 14 -104026
+-262106 0;
+#X text 286 203 read_only;
+#X text 380 201 standard;
+#X obj 301 313 button hello;
+#X obj 341 376 button click_me;
+#X obj 301 384 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 341 339 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 478 243 cnv 15 220 200 empty empty TOOGLE 20 12 0 14 -128992
+-1 0;
+#X obj 505 289 tg_button click;
+#X obj 505 344 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 562 390 tg_button on/off;
+#X obj 562 346 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 9 243 cnv 15 220 200 empty empty STEP_NUMBER 20 12 0 14 -79059
+-262144 0;
+#X obj 42 321 step_number;
+#X floatatom 42 281 5 0 0 0 - - -;
+#X floatatom 42 384 5 0 0 0 - - -;
+#X obj 478 26 cnv 15 220 200 empty change_my_name going? 20 20 0 28
+-104064 -262144 0;
+#X msg 501 185 \; change_my_name label \$1;
+#X msg 501 119 hello;
+#X obj 501 157 symbol;
+#X msg 558 119 how;
+#X msg 593 119 is;
+#X msg 627 119 going?;
+#X obj 715 243 cnv 15 220 200 empty empty SEQ 20 12 0 14 -174763 -66577
+0;
+#X obj 739 417 sequencer;
+#X obj 739 339 i 0;
+#X obj 739 368 % 8;
+#X obj 778 388 + 1;
+#X obj 739 287 tgl 15 0 empty empty click_me 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 739 311 metro 500;
+#X obj 82 457 keyboard;
+#X obj 713 27 cnv 15 220 200 empty empty ADVICE 20 12 0 14 -228856
+-66577 0;
+#X text 727 68 Use pastel color & grey;
+#X text 727 101 Use Purr-Data : . Move back move front . Resize canva
+with mouse . Use auto-align function;
+#X text 728 161;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 7 0 4 0;
+#X connect 7 0 3 0;
+#X connect 11 0 13 0;
+#X connect 14 0 12 0;
+#X connect 16 0 17 0;
+#X connect 19 0 18 0;
+#X connect 21 0 23 0;
+#X connect 22 0 21 0;
+#X connect 26 0 27 0;
+#X connect 27 0 25 0;
+#X connect 28 0 27 0;
+#X connect 29 0 27 0;
+#X connect 30 0 27 0;
+#X connect 33 0 34 0;
+#X connect 34 0 35 0;
+#X connect 34 0 32 0;
+#X connect 35 0 33 1;
+#X connect 36 0 37 0;
+#X connect 37 0 33 0;
